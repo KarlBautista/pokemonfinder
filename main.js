@@ -5,6 +5,10 @@
 //      asynchronously over the web.
 //      fetch(url, {options})
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker registered'));
+}
 async function showPokemon(){
    
    try{
